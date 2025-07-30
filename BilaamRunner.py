@@ -22,7 +22,7 @@ class BilaamRunner:
         "tokenize_iters": 48,
     }
 
-    def __init__(self, checkpoint_path = "./bilaam.checkpoint", should_train=False, hyper_params=DEFAULT_HP, train_mock=False):
+    def __init__(self, checkpoint_path = "./misc/bilaam.checkpoint", should_train=False, hyper_params=DEFAULT_HP, train_mock=False):
         self.model = None
         self.checkpoint_path = checkpoint_path
         self.train_data = None
@@ -53,7 +53,7 @@ class BilaamRunner:
 
     def load_data(self, mock=False):
         # Processing Data:
-        bible_data = open("./HebData/Hebrew_Bible-k_all_clean_eot.txt", "r", encoding="utf-8").read().splitlines()
+        bible_data = open("./misc/HebData/Hebrew_Bible-k_all_clean_eot.txt", "r", encoding="utf-8").read().splitlines()
         bible_data_clean = []
         print("Reading the bible:")
         for line in bible_data:
